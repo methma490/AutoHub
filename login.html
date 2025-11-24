@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicles in Sri Lanka - Login</title>
+    <link rel="icon" href="Images/Title logo.png" sizes="32x32" type="image/png"> <!-- Standard favicon for web browsers -->
+    <link rel="stylesheet" href="CSS/loginStylesheet.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="JS/loginJS.js"> </script>
+</head>
+<body>
+    <div class="nvbar">
+        <a href="Home.html"><img class="Hlogo" src="Images/websitelogo.png" alt="Webpage Logo"></a>
+        <ul id="nvgbar">
+            <li class="nvglist"><a href="Home.html">Home</a></li>
+            <li class="nvglist"><a href="AdsPg.html">Ads</a></li>
+            <li class="nvglist"><a href="Support.html">Support</a></li>
+            <li class="nvglist"><a href="AboutUS.html">About Us</a></li>
+            <li class="nvglist"><a href="Contact.html">Contact Us</a></li>
+            <li class="nvglist"><a class="active"href="#">Login</a></li>
+        </ul>
+        <a href="Profile.html"><img class="Flogo" src="Images/profile logo.png" alt="Profile Logo"></a>
+    </div>
+
+    <div class="color">
+        <div class="form">
+            <form action="login.php" method="post">
+                <h1>Login</h1>
+                <div class="iputbox">
+                    <input type="text" placeholder="Email" name="uid">
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="iputbox">
+                    <input type="password" placeholder="Password" name="upassword">
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <div class="data">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#">Forgot password</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="rejister">
+                    <p>Don't have an account? <a href="signup.html">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>About Us</h3>
+                <a href="aboutus.html">About Us</a>
+                <a href="AboutUS.html">Our Community</a>
+            </div>
+            <div class="box">
+                <h3>Support</h3>
+                <a href="Contact.html">24 hours contact center</a>
+                <a href="Support.html">FAQs</a>
+            </div>
+            <div class="box">
+                <h3>Terms and Conditions</h3>
+                <a href="terms&condition.html">General</a>
+                <a href="terms&condition.html">Copyright</a>
+            </div>
+            <div class="follow-us-container">
+                <h3>Follow Us</h3>
+                <a href="#"><img src="Images/facebook icon.png" alt="Facebook" id="social-links"></a>
+                <a href="#"><img src="Images/twitter icon.png" alt="Twitter" id="social-links"></a>
+                <a href="#"><img src="Images/instragram icon.png" alt="Instagram" id="social-links"></a>
+            </div>
+        </div>
+        <h1 class="credit"><span>@ 2022 All Rights Reserved</span></h1>
+    </section>
+</body>
+</html>

@@ -1,0 +1,349 @@
+/* General styles for the navbar */
+.Hlogo {
+    width: 200px;
+    height: 50px;
+    margin-left: 20px; /* Add space to the left */
+}
+
+.Flogo {
+    width: 50px;
+    height: 50px;
+    margin-right: 40px; /* Add space to the right */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    font-family: "Poppins", sans-serif; /* Moved here for global font */
+}
+
+.nvbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(24, 119, 242);
+    padding: 5px;
+    width: 100%;
+}
+
+ul#nvgbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    background-color: rgb(24, 119, 242);
+    margin-right: 0px; /* Add this to reduce space between Hlogo and nav list */
+}
+
+li.nvglist {
+    margin-right: 25px;
+}
+
+li.nvglist a {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li.nvglist a:hover {
+    background-color: rgb(14, 14, 17);
+}
+
+.nvglist a.active {
+    color: white; 
+    background-color: rgb(12, 54, 107); 
+    border-radius: 5px; 
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .Hlogo {
+        width: 150px;
+        height: 40px;
+    }
+    .Flogo {
+        width: 40px;
+        height: 40px;
+    }
+    li.nvglist a {
+        font-size: 14px;
+        padding: 12px 14px;
+    }
+}
+
+@media (max-width: 800px) {
+    .Hlogo {
+        width: 100px;
+        height: 30px;
+    }
+    .Flogo {
+        width: 30px;
+        height: 30px;
+    }
+    li.nvglist a {
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nvbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    ul#nvgbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    li.nvglist {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.bbdy {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #e0eaff, #f7f3ff);
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding-right:50px;
+    padding-left:20px;
+    padding-top:15px;
+    padding-bottom:5px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+.input-box {
+    margin-bottom: 15px;
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold; /* Keep other labels bold */
+}
+
+.input-box input,
+.input-box select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+    margin-top: 8px;
+}
+
+/* Custom file input styling */
+.custom-file-input {
+    display: none;
+}
+
+/* Ensure all file labels are not bold */
+.file-label {
+    display: inline-block;
+    padding: 12px 20px;
+    background: transparent;
+    color: #707070;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400 !important; /* Force normal weight */
+    width: 100%;
+}
+
+.file-label:hover {
+    background: #E5E4E2;
+}
+
+/* Placeholder style for the text input */
+.input-box input::placeholder {
+    color: #707070;
+}
+
+.column {
+    display: flex;
+    gap: 10px;
+}
+
+.select-box {
+    flex-grow: 1;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 15px;
+    background: #1877F2;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #E43225;
+}
+
+.data {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 14.5px;
+    margin: 5px 0 5px;
+}
+
+.link {
+    display: flex;
+    justify-content:flex-start;
+    font-size: 14.5px;
+    margin-top: 1px;
+}
+.link a {
+    text-decoration: none; 
+    color: #000; 
+}
+
+.link a:hover {
+    text-decoration: underline; 
+    color: #1877F2; 
+}
+
+
+
+.data label input {
+    accent-color: #000;
+    margin-right: 3px;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
+/* Footer section styling */
+.footer {
+    background: #333;
+    padding: 10px 0; /* Reduce overall padding */
+}
+
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Reduce gap between boxes */
+    justify-content: space-between; /* Distribute boxes */
+}
+
+.footer .box-container .box {
+    padding: 10px 0; /* Reduce padding inside each box */
+    flex: 1 1 300px; /* Adjust width for better spacing */
+    text-align: center; /* Center the content and links */
+    margin: 0; /* Ensure no margin between boxes */
+}
+
+.footer .box-container .box h3 {
+    font-size: 20px; /* Smaller font size */
+    padding: 5px 0; /* Reduce padding below heading */
+    color: #fff;
+    margin: 0; /* Remove margin for uniformity */
+}
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 14px; /* Smaller font size */
+    padding: 5px 0; /* Reduce padding */
+    color: #eee;
+    text-decoration: none; /* Remove underline */
+    text-align: center; /* Ensure links are centered */
+}
+
+.footer .box-container .box a:hover {
+    color: #1877F2; /* Changed to a valid color */
+    text-decoration: underline; /* Add underline only on hover */
+}
+
+.footer .credit {
+    text-align: center;
+    padding: 15px 10px; 
+    margin-top: 10px; 
+    font-size: 20px; 
+    color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Social Links Styling */
+.social-links {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: 0 8px; 
+    text-align: center;
+    line-height: 40px; 
+    border-radius: 50%; 
+    color: #fff; 
+    background-color: #555; 
+    font-size: 20px; 
+    transition: background-color 0.3s ease;
+}
+
+.social-links:hover {
+    background-color: #1877F2; 
+    color: white; 
+}
+
+/* Centered Follow Us Section */
+.follow-us-container {
+    text-align: center; 
+    margin: 10px 20px; 
+}
+
+.follow-us-container h3 {
+    color: #fff; 
+    font-size: 18px; 
+    margin: 0; 
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer .box-container {
+        flex-direction: column; 
+        gap: 15px;
+    }
+
+    .footer .box-container .box {
+        flex: 1 1 100%; /* Full width boxes */
+    }
+}

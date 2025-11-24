@@ -1,0 +1,306 @@
+.Hlogo{
+    width: 200px;
+    height: 50px;
+    margin-left: 20px; /* Add space to the left */
+}
+
+.Flogo{
+    width: 50px;
+    height: 50px;
+    margin-right: 40px; /* Add space to the right */
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.nvbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(24, 119, 242);
+    padding: 5px;
+    width: 100%;
+}
+
+ul#nvgbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    background-color:rgb(24, 119, 242);
+    margin-right: 0px; /* Add this to reduce space between Hlogo and nav list */
+}
+
+li.nvglist{
+    margin-right: 25px;
+}
+
+li.nvglist a{
+    font-size:16px;
+    font-family: Arial, Helvetica, sans-serif;
+	display:block;
+	color:white;
+	text-align:center;
+	padding:14px 16px;
+	text-decoration:none;
+}
+
+li.nvglist a:hover{
+	background-color:rgb(14, 14, 17);
+}
+
+.nvglist a.active {
+    color: white; /* Text color for the active item */
+    background-color: rgb(12, 54, 107); /* Background color for the active item */
+    border-radius: 5px; /* Optional: to give the active link rounded corners */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .Hlogo {
+        width: 150px;
+        height: 40px;
+    }
+    .Flogo {
+        width: 40px;
+        height: 40px;
+    }
+    li.nvglist a {
+        font-size: 14px;
+        padding: 12px 14px;
+    }
+}
+
+@media (max-width: 800px) {
+    .Hlogo {
+        width: 100px;
+        height: 30px;
+    }
+    .Flogo {
+        width: 30px;
+        height: 30px;
+    }
+    li.nvglist a {
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nvbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    ul#nvgbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    li.nvglist {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+/*End of navigation bar*/
+
+/* Review and Rating Section Styling */
+.page-container { /* Ensure the page container takes at least the full viewport height */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Flex-grow for the main content to push the footer down */
+.content-wrap {
+    flex: 1;
+}
+
+.review-container {
+    flex: 1; /* Allow this section to grow and fill available space */
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow around the container */
+}
+
+.review-form {
+    margin-bottom: 40px;
+}
+
+.review-form h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Input fields */
+.review-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Input focus state */
+.review-form input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Review text field */
+.review-form .rew {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Submit button */
+.review-form .sub-btn {
+    width: 15%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.review-form .sub-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Placeholder text styling */
+.review-form input::placeholder {
+    color: #aaa;
+}
+
+.reviews {
+    margin-top: 20px;
+}
+
+.review {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.review p {
+    max-width: 80%;
+    color: #555;
+}
+
+.no-reviews {
+    color: #888;
+    font-style: italic;
+}
+
+/*footer section start*/
+.footer {
+    background: #333;
+    padding: 10px 0; /* Reduce overall padding */
+    
+    
+}
+
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Reduce gap between boxes */
+    justify-content: space-between; /* Distribute boxes */
+}
+
+.footer .box-container .box {
+    padding: 10px 0; /* Reduce padding inside each box */
+    flex: 1 1 300px; /* Adjust width for better spacing */
+    text-align: center; 
+    margin: 0; /* Ensure no margin between boxes */
+}
+
+.footer .box-container .box h3 {
+    font-size: 20px; 
+    padding: 5px 0; /* Reduce padding below heading */
+    color: #fff;
+    margin: 0; 
+}
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 14px; 
+    padding: 5px 0; /* Reduce padding */
+    color: #eee;
+    text-decoration: none; /* Remove underline */
+    text-align: center; /* Ensure links are centered */
+}
+
+.footer .box-container .box a:hover {
+    color: var(--blue); /* Adjust hover color */
+    text-decoration: underline; /* Add underline only on hover */
+}
+
+.footer .credit {
+    text-align: center;
+    padding: 15px 10px; /* Smaller padding */
+    margin-top: 10px; /* Reduce margin above */
+    font-size: 20px; /* Smaller font */
+    color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+}
+
+/* Social Links Styling */
+#social-links {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: 0 8px; /* Add space between icons */
+    text-align: center;
+    line-height: 40px; /* Center the icon vertically */
+    border-radius: 50%; /* Make the icons circular */
+    color: #fff; 
+    background-color: #555; 
+    font-size: 20px; /* Font Awesome icon size */
+    transition: background-color 0.3s ease;
+}
+
+#social-links:hover {
+    background-color: var(--blue); /* Change background color on hover */
+    color: white; 
+}
+
+/* Centered Follow Us Section */
+.follow-us-container {
+    text-align: center; /* Center align the 'Follow Us' section */
+    margin: 10px 20px; /* Add margin above and on the sides */
+}
+
+.follow-us-container h3 {
+    color: #fff; /* Set color for 'Follow Us' text */
+    font-size: 18px; 
+    margin: 0; /* Remove margin to avoid extra space */
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer .box-container {
+        flex-direction: column; /* Stack boxes on small screens */
+        gap: 15px;
+    }
+
+    .footer .box-container .box {
+        flex: 1 1 100%; /* Full width boxes */
+    }
+}

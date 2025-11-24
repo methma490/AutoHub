@@ -1,0 +1,338 @@
+.Hlogo{
+    width: 200px;
+    height: 50px;
+    margin-left: 20px; /* Add space to the left */
+}
+
+.Flogo{
+    width: 50px;
+    height: 50px;
+    margin-right: 40px; /* Add space to the right */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.nvbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(24, 119, 242);
+    padding: 5px;
+    width: 100%;
+}
+
+ul#nvgbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    background-color:rgb(24, 119, 242);
+    margin-right: 0px; /* Add this to reduce space between Hlogo and nav list */
+}
+
+li.nvglist{
+    margin-right: 25px;
+}
+
+li.nvglist a{
+    font-size:16px;
+    font-family: Arial, Helvetica, sans-serif;
+	display:block;
+	color:white;
+	text-align:center;
+	padding:14px 16px;
+	text-decoration:none;
+}
+
+li.nvglist a:hover{
+	background-color:rgb(14, 14, 17);
+}
+
+.nvglist a.active {
+    color: white; /* Text color for the active item */
+    background-color: rgb(12, 54, 107); /* Background color for the active item */
+    border-radius: 5px; /* Optional: to give the active link rounded corners */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .Hlogo {
+        width: 150px;
+        height: 40px;
+    }
+    .Flogo {
+        width: 40px;
+        height: 40px;
+    }
+    li.nvglist a {
+        font-size: 14px;
+        padding: 12px 14px;
+    }
+}
+
+@media (max-width: 800px) {
+    .Hlogo {
+        width: 100px;
+        height: 30px;
+    }
+    .Flogo {
+        width: 30px;
+        height: 30px;
+    }
+    li.nvglist a {
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nvbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    ul#nvgbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    li.nvglist {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+/*End of navigation bar*/
+
+/*Add video loop*/
+.home{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center; /* Center content horizontally */
+    position: relative;
+}
+.home .content{
+    position: absolute;
+    text-align:center;
+    margin-top: 0px;
+}
+.home .content h3{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:75px;
+    color: rgb(12, 54, 107);
+    text-transform:uppercase ;
+
+}
+
+.home .content p{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+    padding: .5rem 0;
+    text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,  
+    -1px  1px 0 #000,  
+     1px  1px 0 #000;  
+    
+}
+
+/* Styling the button with a blue background */
+.btn {
+    background-color: #1877F2; /* Facebook blue */
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    text-align: center; 
+    text-decoration: none; 
+    font-size: 16px; 
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; 
+    display: inline-block; /* Ensure it behaves like a button */
+}
+
+.btn:hover {
+    background-color: #145db2;
+}
+
+.home .video-container video{
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: -1;
+    height: 91%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.nvbar, .home, .video-container {
+    width: 100vw; /* Set width to viewport width */
+}
+
+/* Styling the categories section */
+.categories {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-evenly; /* Distribute items evenly */
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Category styling */
+.category {
+    margin: 10px;
+    width: 18%; /* Each category takes 22% of the row width */
+}
+
+/* Category button with image */
+.category button {
+    background-color: #1877F2; /* Facebook blue */
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    display: flex; /* Align image and text side by side */
+    align-items: center; /* Vertically center the text and image */
+    justify-content: flex-start; /* Align content to the left */
+    gap: 10px; /* Add space between the image and text */
+}
+
+/* Ensure image size is appropriate */
+.category button img {
+    width: 100px; 
+    height: 100px; 
+    object-fit: contain; /* Maintain image aspect ratio */
+}
+
+/* Hover effect for buttons */
+.category button:hover {
+    background-color: #145db2; 
+}
+
+/* Create New Ad button styling */
+.create-new-ad button {
+    background-color: #28a745; 
+    height:100%;
+}
+
+.create-new-ad button:hover {
+    background-color: #218838; 
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .category {
+        width: 45%; /* Show 2 items per row on smaller screens */
+    }
+}
+
+@media (max-width: 500px) {
+    .category {
+        width: 100%; /* Stack items vertically on very small screens */
+    }
+}
+
+/*footer section start*/
+.footer {
+    background: #333;
+    padding: 10px 0; /* Reduce overall padding */
+}
+
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Reduce gap between boxes */
+    justify-content: space-between; /* Distribute boxes */
+}
+
+.footer .box-container .box {
+    padding: 10px 0; 
+    flex: 1 1 300px; /* Adjust width for better spacing */
+    text-align: center; /* Center the content and links */
+    margin: 0; /* Ensure no margin between boxes */
+}
+
+.footer .box-container .box h3 {
+    font-size: 20px; 
+    padding: 5px 0; 
+    color: #fff;
+    margin: 0; /* Remove margin for uniformity */
+}
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 14px; 
+    padding: 5px 0; /* Reduce padding */
+    color: #eee;
+    text-decoration: none; /* Remove underline */
+    text-align: center; /
+}
+
+.footer .box-container .box a:hover {
+    color: var(--blue); /* Adjust hover color */
+    text-decoration: underline; 
+}
+
+.footer .credit {
+    text-align: center;
+    padding: 15px 10px; 
+    margin-top: 10px; /* Reduce margin above */
+    font-size: 20px; 
+    color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+}
+
+/* Social Links Styling */
+#social-links {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: 0 8px; /* Add space between icons */
+    text-align: center;
+    line-height: 40px; /* Center the icon vertically */
+    border-radius: 50%; 
+    color: #fff; 
+    background-color: #555; 
+    font-size: 20px; /* Font Awesome icon size */
+    transition: background-color 0.3s ease;
+}
+
+#social-links:hover {
+    background-color: var(--blue); /* Change background color on hover */
+    color: white; 
+}
+
+/* Centered Follow Us Section */
+.follow-us-container {
+    text-align: center; /* Center align the 'Follow Us' section */
+    margin: 10px 20px; /* Add margin above and on the sides */
+}
+
+.follow-us-container h3 {
+    color: #fff; 
+    font-size: 18px; 
+    margin: 0; /* Remove margin to avoid extra space */
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer .box-container {
+        flex-direction: column; /* Stack boxes on small screens */
+        gap: 15px;
+    }
+
+    .footer .box-container .box {
+        flex: 1 1 100%; /* Full width boxes */
+    }
+}

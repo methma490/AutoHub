@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Post an Ad</title>
+    <link rel="icon" href="Images/Title logo.png" sizes="32x32" type="image/png"> <!-- Standard favicon for web browsers -->
+    <link rel="stylesheet" href="CSS/createad.css">
+    <script src="JS/created.js"> </script>
+</head>
+<body>
+    <div class="nvbar">
+        <a href="Home.html"> <img class="Hlogo" src="Images/websitelogo.png" alt="webpage logo"> </a>
+        <ul id="nvgbar">
+            <li class="nvglist"> <a  href="Home.html"> Home </a> </li>
+            <li class="nvglist"> <a class="Active" href="AdsPg.html"> Ads </a> </li>
+            <li class="nvglist"> <a href="Support.html"> Support </a> </li>
+            <li class="nvglist"> <a href="AboutUS.html"> About us </a> </li>
+            <li class="nvglist"> <a href="Contact.html"> Contact us </a> </li>
+            <li class="nvglist"> <a href="login.html"> Login </a> </li>
+        </ul>
+        <a href="Profile.html"> <img class="Flogo" src="Images/profile logo.png" alt="profile logo"> </a>
+        </div>
+    <section class="post-ad">
+        <h2>Fill in the details (Post Ad)</h2>
+        <h2>Add up to 5 photos</h2>
+        <form action="createad.php" method="post" enctype="multipart/form-data">
+            <div class="photo-upload">
+                <div class="photo-slot" id="slot1">
+                    <label for="photo1">1</label>
+                    <input type="file" id="photo1" name="photo1" accept="image/*" onchange="previewPhoto(1)">
+                </div>
+                <div class="photo-slot" id="slot2">
+                    <label for="photo2">2</label>
+                    <input type="file" id="photo2" name="photo2" accept="image/*" onchange="previewPhoto(2)">
+                </div>
+                <div class="photo-slot" id="slot3">
+                    <label for="photo3">3</label>
+                    <input type="file" id="photo3" name="photo3" accept="image/*" onchange="previewPhoto(3)">
+                </div>
+                <div class="photo-slot" id="slot4">
+                    <label for="photo4">4</label>
+                    <input type="file" id="photo4" name="photo4" accept="image/*" onchange="previewPhoto(4)">
+                </div>
+                <div class="photo-slot" id="slot5">
+                    <label for="photo5">5</label>
+                    <input type="file" id="photo5" name="photo5" accept="image/*" onchange="previewPhoto(5)">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="fuel-type">Fuel type</label>
+                <select id="fuel-type" name="fuel-type" required>
+                    <option value="">Select fuel type</option>
+                    <option value="Petrol">Petrol</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="Electric">Electric</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="transmission">Transmission</label>
+                <select id="transmission" name="transmission" required>
+                    <option value="">Select transmission</option>
+                    <option value="Manual">Manual</option>
+                    <option value="Automatic">Automatic</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="payment">Payment</label>
+                <input type="text" id="payment" name="payment" placeholder="ID Number" required>
+                
+            </div>
+
+            <div class="location">
+                <label for="city">Select City or Division</label>
+                <select id="city" name="city" required>
+                    <option value="">Select city</option>
+                    <option value="Colombo">Colombo</option>
+                    <option value="Kandy">Kandy</option>
+                    <option value="Galle">Galle</option>
+                </select>
+            </div>
+
+            <section class="vehicle-details">
+                <div class="form-group">
+                    <label for="vehicle-type">Vehicle type</label>
+                    <input type="text" id="vehicle-type" name="vehicle-type" placeholder="Ex: car" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="condition">Condition</label>
+                    <input type="radio" id="used" name="condition" value="Used" required> Used
+                    <input type="radio" id="reconditioned" name="condition" value="Reconditioned"> Reconditioned
+                    <input type="radio" id="new" name="condition" value="New"> New
+                </div>
+
+                <div class="form-group">
+                    <label for="brand">Brand</label>
+                    <input type="text" id="brand" name="brand" placeholder="Brand" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mileage">Mileage (km)</label>
+                    <input type="text" id="mileage" name="mileage" placeholder="What is the mileage of your vehicle" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="engine-capacity">Engine capacity (cc)</label>
+                    <input type="text" id="engine-capacity" name="engine-capacity" placeholder="What is the engine capacity of your vehicle" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" placeholder="More details, more interested buyers" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Price (RS)</label>
+                    <input type="text" id="price" name="price" placeholder="Pick a good price" required>
+                    <input type="checkbox" id="negotiable" name="negotiable"> Negotiable
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Contact details</label>
+                    <input type="text" id="phone" name="phone" placeholder="Enter phone number" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+
+                <button type="submit" class="post-button" name="submit1">make payment</button>
+            </section>
+        </form>
+    </section>
+    <section class="footer"> 
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>About us</h3>
+                <a href="AboutUS.html">About us</a>
+                <a href="AboutUS.html">Our community</a>
+    
+            </div>
+            <div class="box">
+                <h3>Support</h3>
+                <a href="Contact.html">24 hours contact center</a>
+                <a href="Support.html">FAQs</a>
+            </div>
+            <div class="box">
+                <h3>Terms and Conditions</h3>
+                <a href="terms&condition.html">General</a>
+                <a href="terms&condition.html">Copyright</a>
+            </div>
+            <div class="follow-us-container">
+                <h3>Follow Us</h3> <br>
+                <a href="#"><img src="Images/facebook icon.png" alt="Facebook" id="social-links"></a>
+                <a href="#"><img src="Images/twitter icon.png" alt="Twitter" id="social-links"></a>
+                <a href="#"><img src="Images/instragram icon.png" alt="Instagram" id="social-links"></a>
+            </div>
+        </div>
+        <h1 class="credit"><span>@ 2022 All Rights Reseverd </span></h1>
+     </section>
+
+    <script>
+        // Function to preview selected photos
+        function previewPhoto(slotNumber) {
+            const input = document.getElementById(`photo${slotNumber}`);
+            const slot = document.getElementById(`slot${slotNumber}`);
+
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    slot.style.backgroundImage = `url(${e.target.result})`;
+                    slot.style.backgroundSize = "cover";
+                    slot.style.backgroundPosition = "center";
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+</body>
+</html>

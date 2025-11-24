@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoHub - Vehicles in Sri Lanka</title>
+    <link rel="icon" href="Images/Title logo.png" sizes="32x32" type="image/png"> 
+    <link rel="stylesheet" href="CSS/verification.css"> 
+    <script src="JS/varification.js" defer></script> 
+</head>
+<body>
+    <div class="nvbar">
+        <a href="Home.html">
+            <img class="Hlogo" src="Images/websitelogo.png" alt="webpage logo">
+        </a>
+        <ul id="nvgbar">
+            <li class="nvglist"><a href="#">Home</a></li>
+            <li class="nvglist"><a href="#">Ads</a></li>
+            <li class="nvglist"><a href="Support.html">Support</a></li>
+            <li class="nvglist"><a href="#">About us</a></li>
+            <li class="nvglist"><a href="#">Contact us</a></li>
+            <li class="nvglist"><a href="login.html">Login</a></li>
+        </ul>
+        <a href="Profile.html"> <img class="Flogo" src="Images/profile logo.png" alt="profile logo"> </a>
+    </div>
+
+    <div class="bbdy">
+        <section class="container">
+            <header>Seller Verification</header>
+            <form id="seller-verification-form" action="submit_verification.php" method="POST" enctype="multipart/form-data" class="form">
+                <div class="input-box">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Enter full name" required />
+                </div>
+                <div class="input-box">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter email address" required />
+                </div>
+                <div class="column">
+                    <div class="input-box">
+                        <label for="phone-number">Phone Number</label>
+                        <input type="tel" id="phone-number" name="phone-number" placeholder="Enter phone number" required />
+                    </div>
+                    <div class="input-box">
+                        <label for="postal-code">Postal Code</label>
+                        <input type="text" id="postal-code" name="postal-code" placeholder="Enter postal code" required />
+                    </div>
+                </div>
+
+                <div class="input-box address">
+                    <label>Upload NIC</label>
+                    <div class="input-box">
+                        <label for="front-side" class="file-label">Upload Front Side</label>
+                        <input type="file" id="front-side" name="front-side" class="custom-file-input" accept=".jpg, .jpeg, .png" required />
+                    </div>
+                    <div class="input-box">
+                        <label for="rear-side" class="file-label">Upload Rear Side</label>
+                        <input type="file" id="rear-side" name="rear-side" class="custom-file-input" accept=".jpg, .jpeg, .png" required />
+                    </div>
+
+                    <div class="column">
+                        <div class="select-box">
+                            <label for="district">District</label>
+                            <select id="district" name="district" required>
+                                <option value="" hidden>Select District</option>
+                                <option>Colombo</option>
+                                <option>Kandy</option>
+                                <option>Jaffna</option>
+                                <option>Matara</option>
+                            </select>
+                        </div>
+                        <div class="input-box">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" placeholder="Enter your city" required />
+                        </div>
+                    </div>
+                </div>
+                <button type="submit">Verify</button>
+                <div class="data">
+                    <label for="terms"><input type="checkbox" id="terms" name="terms" required> I accept the terms & conditions</label>
+                </div>
+
+                <div class="link">
+                    <label><a href="issues.html">Informing issues</a></label>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <!-- Footer section start -->
+    <section class="footer"> 
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>About us</h3>
+                <a href="AboutUS.html">About us</a>
+                <a href="AboutUS.html">Our community</a>
+
+            </div>
+            <div class="box">
+                <h3>Support</h3>
+                <a href="Contact.html">24 hours contact center</a>
+                <a href="Support.html">FAQs</a>
+            </div>
+            <div class="box">
+                <h3>Terms and Conditions</h3>
+                <a href="terms&condition.html">General</a>
+                <a href="terms&condition.html">Copyright</a>
+            </div>
+            <div class="follow-us-container">
+                <h3>Follow Us</h3> <br>
+                <a href="#"><img src="Images/facebook icon.png" alt="Facebook" id="social-links"></a>
+                <a href="#"><img src="Images/twitter icon.png" alt="Twitter" id="social-links"></a>
+                <a href="#"><img src="Images/instragram icon.png" alt="Instagram" id="social-links"></a>
+            </div>
+        </div>
+        <h1 class="credit"><span>@ 2022 All Rights Reseverd </span></h1>
+     </section>
+    <!-- Footer section end -->
+</body>
+</html>

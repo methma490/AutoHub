@@ -1,0 +1,366 @@
+  /* website logo */
+  .Hlogo{
+    width: 200px;
+    height: 50px;
+    margin-left: 20px; /* Add space to the left */
+}
+/* profile logo  */
+.Flogo{
+    width: 50px;
+    height: 50px;
+    margin-right: 40px; /* Add space to the right */
+}
+/* Applies to both the body and html elements */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.nvbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(24, 119, 242);
+    padding: 5px;
+    width: 100%;
+}
+
+ul#nvgbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    background-color:rgb(24, 119, 242);
+    margin-right: 0px; /* Add this to reduce space between Hlogo and nav list */
+}
+
+li.nvglist{
+    margin-right: 25px;
+}
+
+li.nvglist a{
+    font-size:16px;
+    font-family: Arial, Helvetica, sans-serif;
+	display:block;
+	color:white;
+	text-align:center;
+	padding:14px 16px;
+	text-decoration:none;
+}
+
+li.nvglist a:hover{
+	background-color:rgb(14, 14, 17);
+}
+
+.nvglist a.active {
+    color: white; /* Text color for the active item */
+    background-color: rgb(12, 54, 107); /* Background color for the active item */
+    border-radius: 5px; /* Optional: to give the active link rounded corners */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .Hlogo {
+        width: 150px;
+        height: 40px;
+    }
+    .Flogo {
+        width: 40px;
+        height: 40px;
+    }
+    li.nvglist a {
+        font-size: 14px;
+        padding: 12px 14px;
+    }
+}
+
+@media (max-width: 800px) {
+    .Hlogo {
+        width: 100px;
+        height: 30px;
+    }
+    .Flogo {
+        width: 30px;
+        height: 30px;
+    }
+    li.nvglist a {
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nvbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    ul#nvgbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    li.nvglist {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+/*End of navigation bar*/
+
+/* Contact Us Section */
+.contact-us {
+    text-align: center;
+    background-color: #d3ebfc;
+    padding: 50px 20px;
+
+}
+/* Styles for the main heading */
+.contact-us h1 {
+    font-size: 28px;
+    color: #0c0c0c;
+}
+/*paragraph*/
+.contact-us p {
+    font-size: 18px;
+    color: #05316b;
+    margin-top: 10px;
+    gap: none;
+}
+.working-hours p {
+    margin: 5px 0;
+    font-size: 13px;
+    color: #666;
+}
+
+/* Contact Info Section */
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    background-color: #a8c5ce;
+    
+}
+
+.contact-info .help, .contact-info .big-ideas {
+    width: 45%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+/* Additional styling specifically for the help subsection */
+.help {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers vertically */
+    align-items: center;     /* Centers horizontally */
+    text-align: center;      /* Ensures text is centered */
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.big-ideas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers vertically */
+    align-items: center;     /* Centers horizontally */
+    text-align: center;      /* Ensures text is centered */
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.contact-info h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.contact-number a, .email a {
+    font-weight: bold;
+    color: #0e3182;
+    text-decoration: none;/*Remove underline*/
+}
+/* Hover state: Add underline on hover */
+.contact-number a:hover, .email a:hover 
+{
+    color: #0056b3; /* Change color on hover if needed */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Online Contact Form Section */
+.online-contact {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.online-contact h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input, textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    padding: 12px;
+    background-color: rgb(24, 119, 242);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(14, 14, 17);
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 900px) {
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-info .help, .contact-info .big-ideas {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+/*footer section start*/
+.footer {
+    background: #333;
+    padding: 10px 0; /* Reduce overall padding */
+}
+
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Reduce gap between boxes */
+    justify-content: space-between; /* Distribute boxes */
+}
+
+.footer .box-container .box {
+    padding: 10px 0; /* Reduce padding inside each box */
+    flex: 1 1 300px; /* Adjust width for better spacing */
+    text-align: center; /* Center the content and links */
+    margin: 0; /* Ensure no margin between boxes */
+}
+
+.footer .box-container .box h3 {
+    font-size: 20px; /* Smaller font size */
+    padding: 5px 0; /* Reduce padding below heading */
+    color: #fff;
+    margin: 0; /* Remove margin for uniformity */
+}
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 14px; /* Smaller font size */
+    padding: 5px 0; /* Reduce padding */
+    color: #eee;
+    text-decoration: none; /* Remove underline */
+    text-align: center; /* Ensure links are centered */
+}
+
+.footer .box-container .box a:hover {
+    color: var(--blue); /* Adjust hover color */
+    text-decoration: underline; /* Add underline only on hover */
+}
+
+.footer .credit {
+    text-align: center;
+    padding: 15px 10px; /* Smaller padding */
+    margin-top: 10px; /* Reduce margin above */
+    font-size: 20px; /* Smaller font */
+    color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+}
+
+/* Social Links Styling */
+#social-links {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: 0 8px; /* Add space between icons */
+    text-align: center;
+    line-height: 40px; /* Center the icon vertically */
+    border-radius: 50%; /* Make the icons circular */
+    color: #fff; /* White icon color */
+    background-color: #555; /* Background color */
+    font-size: 20px; /* Font Awesome icon size */
+    transition: background-color 0.3s ease;
+}
+
+#social-links:hover {
+    background-color: var(--blue); /* Change background color on hover */
+    color: white; /* Keep the icon white */
+}
+
+/* Centered Follow Us Section */
+.follow-us-container {
+    text-align: center; /* Center align the 'Follow Us' section */
+    margin: 10px 20px; /* Add margin above and on the sides */
+}
+
+.follow-us-container h3 {
+    color: #fff; /* Set color for 'Follow Us' text */
+    font-size: 18px; /* Adjust font size */
+    margin: 0; /* Remove margin to avoid extra space */
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer .box-container {
+        flex-direction: column; /* Stack boxes on small screens */
+        gap: 15px;
+    }
+
+    .footer .box-container .box {
+        flex: 1 1 100%; /* Full width boxes */
+    }
+}  

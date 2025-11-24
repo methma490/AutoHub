@@ -1,0 +1,297 @@
+.Hlogo{
+    width: 200px;
+    height: 50px;
+    margin-left: 20px; /* Add space to the left */
+}
+
+.Flogo{
+    width: 50px;
+    height: 50px;
+    margin-right: 40px; /* Add space to the right */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.nvbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(24, 119, 242);
+    padding: 5px;
+    width: 100%;
+}
+
+ul#nvgbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    background-color:rgb(24, 119, 242);
+    margin-right: 0px; /* Add this to reduce space between Hlogo and nav list */
+}
+
+li.nvglist{
+    margin-right: 25px;
+}
+
+li.nvglist a{
+    font-size:16px;
+    font-family: Arial, Helvetica, sans-serif;
+	display:block;
+	color:white;
+	text-align:center;
+	padding:14px 16px;
+	text-decoration:none;
+}
+
+li.nvglist a:hover{
+	background-color:rgb(14, 14, 17);
+}
+
+.nvglist a.active {
+    color: white; /* Text color for the active item */
+    background-color: rgb(12, 54, 107); /* Background color for the active item */
+    border-radius: 5px; /* Optional: to give the active link rounded corners */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .Hlogo {
+        width: 150px;
+        height: 40px;
+    }
+    .Flogo {
+        width: 40px;
+        height: 40px;
+    }
+    li.nvglist a {
+        font-size: 14px;
+        padding: 12px 14px;
+    }
+}
+
+@media (max-width: 800px) {
+    .Hlogo {
+        width: 100px;
+        height: 30px;
+    }
+    .Flogo {
+        width: 30px;
+        height: 30px;
+    }
+    li.nvglist a {
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nvbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    ul#nvgbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    li.nvglist {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+/*End of navigation bar*/
+
+/* Global styling */
+.form {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Form container styling */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+/* Form title */
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center; /* Center the title */
+}
+
+/* Label styling */
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+    color: #555;
+}
+
+/* Input and textarea styling */
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Button styling */
+input[type="submit"] {
+    padding: 12px;
+    background-color: #5a5a5a; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Hover  */
+input[type="submit"]:hover {
+    background-color: #4a4a4a; 
+}
+
+form input[type="text"], form textarea {
+    margin-bottom: 20px;
+}
+
+/* Styling  button container */
+.button-container {
+    display: flex; 
+    justify-content: space-between; 
+}
+
+/* styles for Update and Delete buttons */
+.button-container input[type="submit"] {
+    width: 48%; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+        width: 90%;
+    }
+
+    /* Adjust button padding for smaller screens */
+    input[type="submit"] {
+        padding: 10px;
+    }
+}
+
+/*footer section start*/
+.footer {
+    background: #333;
+    padding: 10px 0; /* Reduce overall padding */
+}
+
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Reduce gap between boxes */
+    justify-content: space-between; /* Distribute boxes */
+}
+
+.footer .box-container .box {
+    padding: 10px 0; 
+    flex: 1 1 300px; /* Adjust width for better spacing */
+    text-align: center; /* Center the content and links */
+    margin: 0; /* Ensure no margin between boxes */
+}
+
+.footer .box-container .box h3 {
+    font-size: 20px; 
+    padding: 5px 0; 
+    color: #fff;
+    margin: 0; /* Remove margin for uniformity */
+}
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 14px; 
+    padding: 5px 0; /* Reduce padding */
+    color: #eee;
+    text-decoration: none; /* Remove underline */
+    text-align: center; /
+}
+
+.footer .box-container .box a:hover {
+    color: var(--blue); /* Adjust hover color */
+    text-decoration: underline; 
+}
+
+.footer .credit {
+    text-align: center;
+    padding: 15px 10px; 
+    margin-top: 10px; /* Reduce margin above */
+    font-size: 20px; 
+    color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+}
+
+/* Social Links Styling */
+#social-links {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: 0 8px; /* Add space between icons */
+    text-align: center;
+    line-height: 40px; /* Center the icon vertically */
+    border-radius: 50%; 
+    color: #fff; 
+    background-color: #555; 
+    font-size: 20px; /* Font Awesome icon size */
+    transition: background-color 0.3s ease;
+}
+
+#social-links:hover {
+    background-color: var(--blue); /* Change background color on hover */
+    color: white; 
+}
+
+/* Centered Follow Us Section */
+.follow-us-container {
+    text-align: center; /* Center align the 'Follow Us' section */
+    margin: 10px 20px; /* Add margin above and on the sides */
+}
+
+.follow-us-container h3 {
+    color: #fff; 
+    font-size: 18px; 
+    margin: 0; /* Remove margin to avoid extra space */
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer .box-container {
+        flex-direction: column; /* Stack boxes on small screens */
+        gap: 15px;
+    }
+
+    .footer .box-container .box {
+        flex: 1 1 100%; /* Full width boxes */
+    }
+}

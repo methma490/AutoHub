@@ -1,0 +1,298 @@
+/* Reset and Base Styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Navigation Bar Styles */
+.Hlogo{
+    width: 200px;
+    height: 50px;
+    margin-left: 20px; /* Add space to the left */
+}
+
+.Flogo{
+    width: 50px;
+    height: 50px;
+    margin-right: 40px; /* Add space to the right */
+}
+
+.nvbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(24, 119, 242);
+    padding: 5px;
+    width: 100%;
+}
+
+ul#nvgbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    background-color:rgb(24, 119, 242);
+    margin-right: 0px; /* Reduce space between Hlogo and nav list */
+}
+
+li.nvglist{
+    margin-right: 25px;
+}
+
+li.nvglist a{
+    font-size:16px;
+    font-family: Arial, Helvetica, sans-serif;
+    display:block;
+    color:white;
+    text-align:center;
+    padding:14px 16px;
+    text-decoration:none;
+}
+
+li.nvglist a:hover{
+    background-color:rgb(14, 14, 17);
+}
+
+.nvglist a.active {
+    color: white; /* Text color for the active item */
+    background-color: rgb(12, 54, 107); /* Background color for the active item */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Form Styles */
+.color{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e6f2fbdc;
+    background-size: cover;
+    background-position: center;
+}
+
+.form{
+    width:420px;
+    background: #ffffff; /* White background */
+    /*border: 3px solid #000000; /* Black border */
+    color: #00000034; /* Black text */
+    backdrop-filter: none; /* Removed blur */
+    border-radius: 12px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 8px rgba(0,0,0, 0.1); /* Box shadow on form */
+}
+
+.form h1{
+    font-size: 36px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #000000fe; /* Black color */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.form .iputbox{
+    position: relative;
+    width:100%;
+    height: 50px;
+    margin:30px 0;
+}
+
+.iputbox input{
+    width:100%;
+    height:100%;
+    background: #ffffff; /* White background */
+    border: 2px solid #353935; /* Black border */
+    border-radius: 40px;
+    font-size: 16px;
+    color:#353935; /* Black text */
+    padding: 20px 45px 20px 20px;
+}
+
+.iputbox input::placeholder{
+    color:#888888; /* Grey placeholder */
+}
+
+.iputbox i{
+    position: absolute;
+    right: 20px;
+    top:20px;
+    transform: translate(-50%);
+    font-size:20px;
+    color: #353935; /* Black icon */
+}
+
+.form .data{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin:-15px 0 15px;
+}
+.form .data label{
+    color:#131313; /* Black accent color for checkboxes/radios */
+    margin-right: 3px;
+    
+}
+.form .data label input{
+    accent-color:#131313; /* Black accent color for checkboxes/radios */
+    margin-right: 3px;
+    
+}
+
+.form .data a{
+    color:#131313; /* Black links */
+    text-decoration: none;
+}
+
+.form .data a:hover{
+    text-decoration: underline;
+}
+
+.form .btn{
+    width: 100%;
+    height:45px;
+    background: #353935; /* Black background */
+    border:none;
+    outline:none;
+    border-radius: 40px;
+    /* Removed box-shadow */
+    cursor: pointer;
+    font-size: 16px;
+    color:#ffffff; /* White text */
+    font-weight: 600;
+}
+
+.btn:hover {
+    background:#7d7c7c; /* Updated hover gradient */
+    /* Removed box-shadow on hover */
+}
+
+.form .rejister{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+.form .rejister p {
+    color: #0000006b; /* Black links */
+    text-decoration: none;
+    font-weight: 600;
+}
+.form .rejister p a{
+    color: rgb(24, 119, 224); /* Black links */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.form .rejister p a:hover{
+    text-decoration: underline;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Footer Styles */
+.footer {
+    background: #333;
+    padding: 10px 0; /* Reduced padding */
+}
+
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Reduced gap */
+    justify-content: space-between;
+}
+
+.footer .box-container .box {
+    padding: 10px 0; /* Reduced padding */
+    flex: 1 1 300px; /* Adjusted width */
+    text-align: center;
+    margin: 0;
+}
+
+.footer .box-container .box h3 {
+    font-size: 20px; /* Smaller font */
+    padding: 5px 0; /* Reduced padding */
+    color: #fff;
+    margin: 0;
+}
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 14px; /* Smaller font */
+    padding: 5px 0;
+    color: #eee;
+    text-decoration: none;
+    text-align: center;
+}
+
+.footer .box-container .box a:hover {
+    color: var(--blue); /* Adjust hover color */
+    text-decoration: underline;
+}
+
+.footer .credit {
+    text-align: center;
+    padding: 15px 10px; /* Smaller padding */
+    margin-top: 10px; /* Reduced margin */
+    font-size: 20px; /* Smaller font */
+    color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+}
+
+/* Social Links Styling */
+#social-links {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: 0 8px; /* Space between icons */
+    text-align: center;
+    line-height: 40px; /* Center vertically */
+    border-radius: 50%; /* Circular icons */
+    color: #fff; /* White icons */
+    background-color: #555; /* Background color */
+    font-size: 20px; /* Icon size */
+    transition: background-color 0.3s ease;
+}
+
+#social-links:hover {
+    background-color: var(--blue); /* Hover background */
+    color: white; /* Keep icons white */
+}
+
+/* Follow Us Section */
+.follow-us-container {
+    text-align: center;
+    margin: 10px 20px;
+}
+
+.follow-us-container h3 {
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer .box-container {
+        flex-direction: column; /* Stack boxes */
+        gap: 15px;
+    }
+
+    .footer .box-container .box {
+        flex: 1 1 100%; /* Full width */
+    }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> AutoHub - Vehicles in Srilanka</title>
+        <link rel="icon" href="Images/Title logo.png" sizes="32x32" type="image/png"> <!-- Sets the favicon for the webpage -->
+        <link rel="stylesheet" href="CSS/Home.css">
+        <script src="JS/Home.js"> </script>
+    </head>
+    <body>
+        <div class="nvbar">
+        <a href="Home.html"> <img class="Hlogo" src="Images/websitelogo.png" alt="webpage logo"> </a> <!-- Logo linked to the home page -->
+        <ul id="nvgbar">
+            <li class="nvglist"> <a class="active" href="#"> Home </a> </li>
+            <li class="nvglist"> <a href="AdsPg.html"> Ads </a> </li>
+            <li class="nvglist"> <a href="Support.html"> Support </a> </li>
+            <li class="nvglist"> <a href="AboutUS.html"> About us </a> </li>
+            <li class="nvglist"> <a href="Contact.html"> Contact us </a> </li>
+            <li class="nvglist"> <a href="login.html"> Login </a> </li>
+        </ul>
+        <a href="Profile.html"> <img class="Flogo" src="Images/profile logo.png" alt="profile logo"> </a>
+        </div>
+        <!--End of navigation bar-->
+        
+        <!--home section start-->
+        <section class="home" id="home">
+
+        <div class="content">
+            <br><br><br>
+            <h3>Welcome to AutoHub</h3>
+            <p>Drive your dreams into reality. <br>Discover unmatched deals and the perfect vehicle <br>for every journey at the click of a button.</p>
+            <a href="AdsPg.html" class="btn">Find out more</a>
+        </div>
+
+            <div class="video-container">
+                <video src="Images/key transfer.mp4" id="videoPlayer" loop autoplay muted></video> <!-- Video that plays automatically and loops -->
+        </section>
+
+        <!-- start of Categories section for vehicle types -->
+        <section class="categories">
+            <div class="category create-new-ad">
+                <button onclick="window.location.href='createad.html';">+ Post Your Ad Now</button>
+            </div>
+            <!-- Each category button -->
+            <div class="category">
+                <button onclick="window.location.href='AdsPg.html';"><img src="Images/motorbike icon.png" alt="Motorbikes"> MotorBikes</button>
+            </div>
+            <div class="category">
+                <button onclick="window.location.href='AdsPg.html';"><img src="Images/Car icon.png" alt="Cars"> Cars</button>
+            </div>
+            <div class="category">
+                <button onclick="window.location.href='AdsPg.html';"><img src="Images/threeweller icon.png" alt="Three Wheelers"> Three Wheelers</button>
+            </div>
+            <div class="category">
+                <button onclick="window.location.href='AdsPg.html';"><img src="Images/bus icon.png" alt="Buses"> Buses</button>
+            </div>
+            <div class="category">
+                <button onclick="window.location.href='AdsPg.html';"><img src="Images/truck icon.png" alt="Lorries and Trucks"> Lorries and Trucks</button>
+            </div>
+            <div class="category">
+                <button onclick="window.location.href='AdsPg.html';"><img src="Images/boat icon.png" alt="Boats"> Boats</button>
+            </div>
+            <div class="category">
+                <button onclick="window.location.href='AdsPg.html';"><img src="Images/bycycle icon.png" alt="Bicycles"> Bicycles</button>
+            </div>
+            <div class="category">
+                <button onclick="window.location.href='AdsPg.html';"><img src="Images/tractor icon.png" alt="Tractors"> Tractors</button>
+            </div>
+            <div class="category">
+                <button onclick="window.location.href='AdsPg.html';"><img src="Images/van icon.png" alt="Vans"> Vans</button>
+            </div>
+
+
+        </section>
+        <!-- End of categories section -->
+
+        <!--footer section start-->
+        <section class="footer"> 
+
+            <div class="box-container">
+
+                <div class="box">
+                    <h3>About us</h3>
+                    <a href="AboutUS.html">About us</a>
+                    <a href="AboutUS.html">Our community</a>
+
+                </div>
+                <div class="box">
+                    <h3>Support</h3>
+                    <a href="Contact.html">24 hours contact center</a>
+                    <a href="Support.html">FAQs</a>
+                </div>
+                <div class="box">
+                    <h3>Terms and Conditions</h3>
+                    <a href="terms&condition.html">General</a>
+                    <a href="terms&condition.html">Copyright</a>
+                </div>
+                <div class="follow-us-container">
+                    <h3>Follow Us</h3> <br>
+                    <a href="#"><img src="Images/facebook icon.png" alt="Facebook" id="social-links"></a>
+                    <a href="#"><img src="Images/twitter icon.png" alt="Twitter" id="social-links"></a>
+                    <a href="#"><img src="Images/instragram icon.png" alt="Instagram" id="social-links"></a>
+                </div>
+            </div>
+            <h1 class="credit"><span>@ 2022 All Rights Reseverd </span></h1>
+         </section>
+
+    </body>
+</html>

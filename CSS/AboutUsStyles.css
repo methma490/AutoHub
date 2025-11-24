@@ -1,0 +1,409 @@
+/* About Us page */
+.Hlogo{
+    width: 200px;
+    height: 50px;
+    margin-left: 20px; /* Add space to the left */
+}
+
+.Flogo{
+    width: 50px;
+    height: 50px;
+    margin-right: 40px; /* Add space to the right */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.nvbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(24, 119, 242);
+    padding: 5px;
+    width: 100%;
+}
+
+ul#nvgbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    background-color:rgb(24, 119, 242);
+    margin-right: 0px; /* Add this to reduce space between Hlogo and nav list */
+}
+
+li.nvglist{
+    margin-right: 25px;
+}
+
+li.nvglist a{
+    font-size:16px;
+    font-family: Arial, Helvetica, sans-serif;
+	display:block;
+	color:white;
+	text-align:center;
+	padding:14px 16px;
+	text-decoration:none;
+}
+
+li.nvglist a:hover{
+	background-color:rgb(14, 14, 17);
+}
+
+.nvglist a.active {
+    color: white; /* Text color for the active item */
+    background-color: rgb(12, 54, 107); /* Background color for the active item */
+    border-radius: 5px; /* Optional: to give the active link rounded corners */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .Hlogo {
+        width: 150px;
+        height: 40px;
+    }
+    .Flogo {
+        width: 40px;
+        height: 40px;
+    }
+    li.nvglist a {
+        font-size: 14px;
+        padding: 12px 14px;
+    }
+}
+
+@media (max-width: 800px) {
+    .Hlogo {
+        width: 100px;
+        height: 30px;
+    }
+    .Flogo {
+        width: 30px;
+        height: 30px;
+    }
+    li.nvglist a {
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nvbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    ul#nvgbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    li.nvglist {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+/*End of navigation bar*/
+
+/* Container Styles */
+.container {
+    width: 100%;
+    max-width: 1480px;
+    margin: 10px auto;
+    background-color: #eee;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+/* Title Styles */
+.title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.title h1 {
+    font-size: 2.5rem;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    margin-top: 0px;
+}
+
+.title h1::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 5px;
+    background-color: rgb(77, 67, 184);
+    margin: 0px auto 0;
+    border-radius: 2px;
+}
+
+/* Content Styles */
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.article {
+    background-color: #eee;
+    padding: 18px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: -5px;
+}
+
+.article h2 {
+    color: rgb(77, 67, 184);
+    font-size: 1.75rem;
+    margin-bottom: 19px;
+}
+
+.article p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.article a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(77, 67, 184);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.article a.button:hover {
+    background-color: #574c9a;
+}
+
+.image-section img {
+    width: 100%;
+    border-radius: 15px;
+    height:80%;
+    margin-top: 0px;
+    
+    
+}
+
+/* Contact Section Styles */
+.contact-section {
+    margin-top: 30px;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.1);
+    width:1400px;
+    text-align: center;
+    box-sizing: content-box;
+    
+    
+    
+}
+
+.contact-section h2 {
+    color: rgb(77, 67, 184);
+    margin-bottom: 0px;
+    padding: 0px;
+    margin-top: 2px;
+    font-weight: 300px;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.contact-item i {
+    font-size: 15px;
+    color: rgb(77, 67, 184);
+}
+
+.contact-item p {
+    margin-top: 5px;
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+.working-hours{
+    color: #000;
+    font-size: 23px;
+    margin-bottom: 2px;
+    margin-top: 4px;
+}
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px; /* Reduce space between icon and text */
+}
+
+.icon img {
+    width: 35px; /* Adjust the icon size as needed */
+    height: auto;
+    margin-bottom: 5px; /* Less space between icon and following elements */
+}
+
+.contact-item a {
+    margin-top: 2px; /* Bring link closer to text */
+    font-size: 18px;
+    color: #0000ff;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*footer section start*/
+.footer {
+    background: #333;
+    padding: 10px 0; /* Reduce overall padding */
+}
+
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Reduce gap between boxes */
+    justify-content: space-between; /* Distribute boxes */
+}
+
+.footer .box-container .box {
+    padding: 10px 0; 
+    flex: 1 1 300px; /* Adjust width for better spacing */
+    text-align: center; /* Center the content and links */
+    margin: 0; /* Ensure no margin between boxes */
+}
+
+.footer .box-container .box h3 {
+    font-size: 20px; 
+    padding: 5px 0; 
+    color: #fff;
+    margin: 0; /* Remove margin for uniformity */
+}
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 14px; 
+    padding: 5px 0; /* Reduce padding */
+    color: #eee;
+    text-decoration: none; /* Remove underline */
+    text-align: center; /
+}
+
+.footer .box-container .box a:hover {
+    color: var(--blue); /* Adjust hover color */
+    text-decoration: underline; 
+}
+
+.footer .credit {
+    text-align: center;
+    padding: 15px 10px; 
+    margin-top: 10px; /* Reduce margin above */
+    font-size: 20px; 
+    color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+}
+
+/* Social Links Styling */
+#social-links {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: 0 8px; /* Add space between icons */
+    text-align: center;
+    line-height: 40px; /* Center the icon vertically */
+    border-radius: 50%; 
+    color: #fff; 
+    background-color: #555; 
+    font-size: 20px; /* Font Awesome icon size */
+    transition: background-color 0.3s ease;
+}
+
+#social-links:hover {
+    background-color: var(--blue); /* Change background color on hover */
+    color: white; 
+}
+
+/* Centered Follow Us Section */
+.follow-us-container {
+    text-align: center; /* Center align the 'Follow Us' section */
+    margin: 10px 20px; /* Add margin above and on the sides */
+}
+
+.follow-us-container h3 {
+    color: #fff; 
+    font-size: 18px; 
+    margin: 0; /* Remove margin to avoid extra space */
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer .box-container {
+        flex-direction: column; /* Stack boxes on small screens */
+        gap: 15px;
+    }
+
+    .footer .box-container .box {
+        flex: 1 1 100%; /* Full width boxes */
+    }
+}

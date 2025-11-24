@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> AutoHub - Vehicles in Srilanka</title>
+        <link rel="icon" href="Images/Title logo.png" sizes="32x32" type="image/png"> <!-- Standard favicon for web browsers -->
+        <link rel="stylesheet" href="CSS/signup.css">
+        <script src="JS/signup.js"> </script>
+    </head>
+    <body>
+        
+        <!--------------------------------------------navigation bar start--------------------------------------------------->
+        <div class="nvbar">
+        <a href="Home.html"> <img class="Hlogo" src="Images/websitelogo.png" alt="webpage logo"> </a>
+        <ul id="nvgbar">
+            <li class="nvglist"> <a href="Home.html"> Home </a> </li>
+            <li class="nvglist"> <a href="AdsPg.html"> Ads </a> </li>
+            <li class="nvglist"> <a href="Support.html"> Support </a> </li>
+            <li class="nvglist"> <a href="AboutUS.html"> About us </a> </li>
+            <li class="nvglist"> <a href="Contact.html"> Contact us </a> </li>
+            <li class="nvglist"> <a class="active" href="login.html"> Login </a> </li>
+        </ul>
+        <a href="Profile.html"> <img class="Flogo" src="Images/profile logo.png" alt="profile logo"> </a>
+        </div>
+        <!--------------------------------------------navigation bar End--------------------------------------------------->
+
+
+
+
+        <!------------------------------------------sign up form---------------------------------------->
+        <div class="signup-container">
+            <h2>Sign Up</h2>
+            <form action="signup-Insert.php" method="POST">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                <div id="error-message1" style="color: red;"></div>
+
+        
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <div id="error-message2" style="color: red;"></div>
+
+        
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <div id="error-message3" style="color: red;"></div>
+        
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required>
+                <div id="error-message4" style="color: red;"></div>
+        
+                <button type="submit" onclick="validateForm(event)">Sign Up</button>
+            </form>
+            
+
+            <div class="form-footer">
+                <p>Already have an account? <a href="login.html">Log in here</a></p>
+            </div>
+        </div>
+        <!------------------------------------------End of the signup form------------------------------------------------>
+
+
+
+        <!--------------------------------------------footer section start--------------------------------------------------->
+        <section class="footer"> 
+
+            <div class="box-container">
+
+                <div class="box">
+                    <h3>About us</h3>
+                    <a href="AboutUS.html">About us</a>
+                    <a href="AboutUS.html">Our community</a>
+
+                </div>
+                <div class="box">
+                    <h3>Support</h3>
+                    <a href="Contact.html">24 hours contact center</a>
+                    <a href="Support.html">FAQs</a>
+                </div>
+                <div class="box">
+                    <h3>Terms and Conditions</h3>
+                    <a href="terms&condition.html">General</a>
+                    <a href="terms&condition.html">Copyright</a>
+                </div>
+                <div class="follow-us-container">
+                    <h3>Follow Us</h3> <br>
+                    <a href="#"><img src="Images/facebook icon.png" alt="Facebook" id="social-links"></a>
+                    <a href="#"><img src="Images/twitter icon.png" alt="Twitter" id="social-links"></a>
+                    <a href="#"><img src="Images/instragram icon.png" alt="Instagram" id="social-links"></a>
+                </div>
+            </div>
+            <h1 class="credit"><span>@ 2022 All Rights Reseverd </span></h1>
+         </section>
+         <!--------------------------------------------footer section End--------------------------------------------------->
+
+    </body>
+</html>
+

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="icon" href="Images/Title logo.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="CSS/Profile.css">
+    <script src="JS/Profile.js" defer></script>
+    <style>
+        .Seller-Verify, .Member-Plan, .Update, .Delete {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .Seller-Verify {
+            margin-left: 580px;
+            margin-right: 5px;
+        }
+        .Update {
+            margin-right: 10px;
+        }
+
+        .change-password:hover, .Seller-Verify:hover, .Member-Plan:hover, .Update:hover, .Delete:hover {
+            transform: scale(1.05);
+            z-index: 1000;
+            transition: 0.2s ease;
+        }
+        
+        /* Style for the update popup */
+        .popup {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .popup-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+        }
+        .close {
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Style for the delete popup */
+        #deletePopup {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        #deletePopup .popup-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+        }
+    </style>
+
+    <!-- Load jQuery from CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Fallback to local jQuery if CDN fails -->
+    <script>
+        window.jQuery || document.write('<script src="/path/to/local/jquery.min.js"><\/script>');
+    </script>
+</head>
+<body>
+    <div class="nvbar">
+        <a href="Home.html"><img class="Hlogo" src="Images/websitelogo.png" alt="webpage logo"></a>
+        <ul id="nvgbar">
+            <li class="nvglist"><a href="Home.html"> Home </a></li>
+            <li class="nvglist"><a href="AdsPg.html"> Ads </a></li>
+            <li class="nvglist"><a href="Support.html"> Support </a></li>
+            <li class="nvglist"><a href="AboutUS.html"> About us </a></li>
+            <li class="nvglist"><a href="Contact.html"> Contact us </a></li>
+            <li class="nvglist"><a href="login.html"> Login </a></li>
+        </ul>
+        <a href="Profile.html"><img class="Flogo" src="Images/profile logo.png" alt="profile logo"></a>
+    </div>
+
+    <main>
+        <section class="profile">
+            <div class="profile-pic-container">
+                <img id="profilePic" class="plogo" src="Images/profile logo.png" alt="Profile Picture">
+            </div>
+        </section>
+
+        <div class="personal-info">
+            <h3>Personal Information</h3>
+            <form id="profileForm">
+                <div class="info-grid">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div>
+                        <label for="addressline1">Address Line 1:</label>
+                        <input type="text" id="addressline1" name="addressline1" placeholder="Enter address line 1" required>
+                    </div>
+                    <div>
+                        <label for="nationalid">National ID:</label>
+                        <input type="text" id="nationalid" name="nationalid" placeholder="Enter national ID" required>
+                    </div>
+                    <div>
+                        <label for="addressline2">Address Line 2:</label>
+                        <input type="text" id="addressline2" name="addressline2" placeholder="Enter address line 2">
+                    </div>
+                    <div>
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div>
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                    </div>
+                    <div>
+                        <label for="phone">Phone:</label>
+                        <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div>
+                        <label for="postalcode">Postal/Zip Code:</label>
+                        <input type="text" id="postalcode" name="postalcode" placeholder="Enter postal/zip code" required>
+                    </div>
+                </div>
+                <button type="button" class="change-password" onclick="window.location.assign('change_password.html');">Change Password</button>
+                <button type="button" class="edit-btn" onclick="submitForm(event)">Save details</button>
+                <button type="button" class="Seller-Verify" onclick="window.location.assign('varification.html');">Seller Verification</button>
+                <button type="button" class="Member-Plan" onclick="window.location.assign('MemberPM.html');">Member Plan</button>
+            </form>
+
+            <div id="profile-details" style="margin-top: 20px;"></div>
+
+            <button type="button" id="UpdateDetailsBtn" class="Update">Update Details</button>
+            <button type="button" class="Delete" id="deleteProfileButton">Delete Profile</button>
+
+            <div id="popupForm" class="popup">
+                <div class="popup-content">
+                    <span class="close">&times;</span>
+                    <form id="updateForm" method="POST" action="Profile-update.php">
+                        <label for="name_popup">Name:</label>
+                        <input type="text" id="name_popup" name="name"><br><br>
+                        <label for="email_popup">Email:</label>
+                        <input type="email" id="email_popup" name="email" readonly><br><br>
+                        <label for="nationalid_popup">National ID:</label>
+                        <input type="text" id="nationalid_popup" name="nationalid"><br><br>
+                        <label for="addressline1_popup">Address Line 1:</label>
+                        <input type="text" id="addressline1_popup" name="addressline1"><br><br>
+                        <label for="addressline2_popup">Address Line 2:</label>
+                        <input type="text" id="addressline2_popup" name="addressline2"><br><br>
+                        <label for="city_popup">City:</label>
+                        <input type="text" id="city_popup" name="city"><br><br>
+                        <label for="phone_popup">Phone:</label>
+                        <input type="text" id="phone_popup" name="phone"><br><br>
+                        <label for="postalcode_popup">Postal Code:</label>
+                        <input type="text" id="postalcode_popup" name="postalcode"><br><br>
+                        <button type="submit">Update</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="deletePopup" class="popup">
+                <div class="popup-content">
+                    <span class="close" onclick="closeDeletePopup()">&times;</span>
+                    <form id="deleteForm">
+                        <h4>Enter your email to delete your profile:</h4>
+                        <label for="deleteEmail">Email:</label>
+                        <input type="email" id="deleteEmail" name="email" required>
+                        <button type="button" onclick="submitDeleteForm(event)">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="footer"> 
+        <div class="box-container">
+            <div class="box">
+                <h3>About us</h3>
+                <a href="AboutUS.html">About us</a>
+                <a href="AboutUS.html">Our community</a>
+            </div>
+            <div class="box">
+                <h3>Support</h3>
+                <a href="Contact.html">24 hours contact center</a>
+                <a href="Support.html">FAQs</a>
+            </div>
+            <div class="box">
+                <h3>Terms and Conditions</h3>
+                <a href="terms&condition.html">General</a>
+                <a href="terms&condition.html">Copyright</a>
+            </div>
+            <div class="follow-us-container">
+                <h3>Follow Us</h3>
+                <a href="#"><img src="Images/facebook icon.png" alt="Facebook" id="social-links"></a>
+                <a href="#"><img src="Images/twitter icon.png" alt="Twitter" id="social-links"></a>
+                <a href="#"><img src="Images/instragram icon.png" alt="Instagram" id="social-links"></a>
+            </div>
+        </div>
+        <h1 class="credit"><span>@ 2022 All Rights Reserved</span></h1>
+    </section>
+
+    <script>
+        // Submit form via AJAX
+        function submitForm(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const form = document.getElementById('profileForm');
+            const formData = new FormData(form);
+
+            // Perform client-side validation
+            const name = formData.get('name');
+            const email = formData.get('email');
+            if (!name || !email) {
+                alert('Please provide both name and email!');
+                return;
+            }
+
+            // AJAX request to save data and fetch updated profile details
+            fetch('Profile-insert.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok: ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Check if there was an error in the response
+                if (data.error) {
+                    throw new Error(data.error);
+                }
+
+                // Handle success: Display profile details
+                const profileDetails = `
+                    <h4>Profile Details:</h4>
+                    <p>Name: ${data.name}</p>
+                    <p>Email: ${data.email}</p>
+                    <p>National ID: ${data.nationalid}</p>
+                    <p>Address Line 1: ${data.addressline1}</p>
+                    <p>Address Line 2: ${data.addressline2}</p>
+                    <p>City: ${data.city}</p>
+                    <p>Phone: ${data.phone}</p>
+                    <p>Postal Code: ${data.postalcode}</p>
+                `;
+                document.getElementById('profile-details').innerHTML = profileDetails;
+
+                // Optionally, show a success message
+                alert('Profile saved successfully!');
+            })
+            .catch(error => {
+                // Handle errors
+                console.error('Error:', error);
+                alert('There was an error saving your profile: ' + error.message);
+            });
+        }
+
+        function showPopup() {
+            document.getElementById('popupForm').style.display = 'block'; // Show the popup
+        }
+
+        // Function to close the popup
+        function closePopup() {
+            document.getElementById('popupForm').style.display = 'none'; // Hide the popup
+        }
+
+        // Event listener for the close button
+        document.querySelector('.close').addEventListener('click', closePopup);
+
+        // Add event listener for the Update Details button
+        document.getElementById('UpdateDetailsBtn').addEventListener('click', showPopup);
+
+
+        // Function to show the popup
+        function showPopup() {
+            const emailField = document.getElementById('email'); // Get the email field from the main form
+            const emailPopupField = document.getElementById('email_popup'); // Get the email field from the popup
+
+            // Set the email value in the popup field
+            emailPopupField.value = emailField.value;
+
+            // Make the email field readonly
+            emailPopupField.readOnly = true;
+
+            // Show the popup
+            document.getElementById('popupForm').style.display = 'block';
+        }
+        
+        
+    // JavaScript to handle delete button click
+    $(document).ready(function() {
+        $("#deleteProfileButton").click(function() {
+            // Prompt for the email to delete the profile
+            var email = prompt("Enter your email to delete your profile:");
+
+            // Check if the user provided an email or canceled the prompt
+            if (email === null) {
+                // User cancelled the prompt; do nothing
+                return;
+            } else if (email.trim() === "") {
+                // If email is empty (user entered spaces), show a message
+                alert("Email is required to delete the profile.");
+                return; // Exit the function to prevent further actions
+            }
+
+            // At this point, we have a valid email
+            console.log("Email entered: " + email); // For debugging
+
+            // Make an AJAX POST request to delete the profile
+            $.ajax({
+                type: "POST",
+                url: "Profile-delete.php",
+                data: { email: email },
+                success: function(response) {
+                    // Show the server response in an alert (success or error message)
+                    alert(response); // This should be the only alert shown
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    // Show any errors that occur during the AJAX request
+                    alert("Error occurred while deleting the profile: " + errorThrown);
+                }
+            });
+        });
+    });
+    
+    </script>
+</body>
+</html>

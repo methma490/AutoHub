@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> AutoHub - Vehicles in Srilanka</title>
+        <link rel="icon" href="Images/Title logo.png" sizes="32x32" type="image/png"> <!-- Sets the favicon for the webpage -->
+        <link rel="stylesheet" href="CSS/Support.css">
+        <script src="JS/support.js"> </script>
+    </head>
+    <body>
+        <div class="nvbar">
+        <a href="Home.html"> <img class="Hlogo" src="Images/websitelogo.png" alt="webpage logo"> </a> <!-- Logo linked to the home page -->
+        <ul id="nvgbar">
+            <li class="nvglist"> <a href="Home.html"> Home </a> </li>
+            <li class="nvglist"> <a href="AdsPg.html"> Ads </a> </li>
+            <li class="nvglist"> <a class="active" href="#"> Support </a> </li>
+            <li class="nvglist"> <a href="AboutUS.html"> About us </a> </li>
+            <li class="nvglist"> <a href="Contact.html"> Contact us </a> </li>
+            <li class="nvglist"> <a href="login.html"> Login </a> </li>
+        </ul>
+        <a href="Profile.html"> <img class="Flogo" src="Images/profile logo.png" alt="profile logo"> </a>
+        </div>
+        <!--End of navigation bar-->
+
+        <!-- support section start-->
+        <div class="faq-container">
+        <div class="content-wrap"> <!-- Wrapper for the content inside the FAQ section -->
+            <h1>Frequently asked questions</h1>
+        
+            <!-- Input to send question -->
+            <form action="Support_insert.php" method="post" class="faq-search-container">
+                <input type="email" class="faq-email" name="semail" placeholder="Enter email" required>
+                <input type="text" class="faq-send" name="squestion" placeholder="What do you need help with?" required>
+                <button type="submit" class="send-btn">Send</button>
+            </form>
+        
+            <div class="faq-category-container">
+                <div class="faq-category" onclick="scrollToGeneralSafety()">
+                    <h2>General questions about AutoHub</h2>
+                    <p>Other frequently asked questions</p>
+                    <span>1 Article</span>
+                </div>
+        
+                <div class="faq-category" onclick="scrollToBuyingHelp()">
+                    <h2>Do you need help buying in AutoHub?</h2>
+                    <p>Frequently asked questions by buyers</p>
+                    <span>1 Article</span>
+                </div>
+        
+                <div class="faq-category" onclick="scrollToSellingHelp()">
+                    <h2>Do you need help selling in AutoHub?</h2>
+                    <p>Frequently asked questions by sellers</p>
+                    <span>1 Article</span>
+                </div>
+            </div>
+        
+            <!-- Safety Advice Section -->
+            <div id="general-safety" class="safety-advice"> <!-- Section for general safety advice -->
+                <h2>General questions about AutoHub</h2>
+                <h3>How can I be safe on AutoHub?</h3>
+                <p>When using the AutoHub website, it is essential to prioritize your safety to ensure a positive buying and selling experience. 
+                   Always take precautions by meeting sellers in person to inspect items before making any payments. It’s crucial to exchange 
+                   payment and the item simultaneously, ensuring that buyers do not make payments before receiving their purchased goods, and 
+                   sellers do not send items before confirming payment. Additionally, never disclose sensitive financial information such as bank 
+                   account details or personal identification numbers. To further enhance your safety, utilize local communication methods and 
+                   trust your instincts; if a deal seems too good to be true, it probably is. By following these guidelines, you can navigate 
+                   AutoHub securely and confidently.</p>
+                <h4>General Safety Advice</h4> <!-- Subheading for general safety advice -->
+                <p>When using AutoHub, it's crucial to exercise caution and be vigilant during transactions. Always prioritize in-person 
+                    meetings with sellers to verify the condition and authenticity of the item before any exchange takes place. Conducting 
+                    transactions in public spaces, such as coffee shops or malls, can help ensure your safety and deter potential scams.
+                     Additionally, be wary of offers that seem too good to be true; if a deal appears suspicious or unusually low in price, it’s 
+                     wise to conduct further research on the seller or reconsider the purchase. Always communicate clearly with the seller and do 
+                     not hesitate to ask for more information or additional photos of the item to avoid misunderstandings. </p>
+            </div>
+            <div id="buying-help" class="safety-advice"> <!-- Section for buying help -->
+                <h2>Do you need help buying in AutoHub?</h2>
+                <p>Navigating the AutoHub website can be an exciting experience, especially for first-time buyers looking for great deals on 
+                    various products. If you need help with the buying process, it's essential to start by familiarizing yourself with the 
+                    platform's features and offerings. Use the search functionality to filter listings based on your preferences, such as price 
+                    range, item condition, and location. Once you find a potential purchase, carefully review the item description and 
+                    accompanying images to ensure that the product meets your expectations. Don't hesitate to reach out to the seller with any 
+                    questions or requests for additional information; clear communication can help prevent misunderstandings and ensure that 
+                    you're making an informed decision.</p>
+                
+                <p>When you're ready to proceed with a purchase, it's important to follow best practices to ensure a smooth transaction.
+                     Always arrange to meet the seller in a safe, public location where you can inspect the item before making payment. 
+                     This allows you to verify the product's condition and authenticity firsthand. Additionally, avoid making advance payments 
+                     without seeing the item, as this can lead to scams or unmet expectations. Secure your transaction by exchanging payment 
+                     and the item simultaneously, and remember to keep a record of the conversation and any agreements made. By following these 
+                     guidelines, you can confidently navigate the buying process on AutoHub and make informed purchases that meet your needs.</p>
+            </div>
+            <div id="selling-help" class="safety-advice"> <!-- Section for selling help -->
+                <h2>Do you need help buying in AutoHub?</h2>
+                <p>Selling on AutoHub can be a rewarding experience, allowing you to reach a broad audience and successfully sell your items.
+                     To get started, it's essential to create a compelling listing that attracts potential buyers. Begin by providing a clear 
+                     and detailed description of the item you wish to sell, highlighting its features, condition, and any unique selling points. 
+                     High-quality images are crucial; ensure you take clear, well-lit photos from multiple angles to give buyers a comprehensive 
+                     view of the product. Additionally, set a competitive price by researching similar listings on the platform, which will help 
+                     you determine a fair value for your item and increase your chances of a quick sale.</p>
+                
+                <p>Once your listing is live, effective communication with potential buyers is key to a successful transaction. Be prompt in 
+                    responding to inquiries and open to negotiating the price if necessary. When arranging a meet-up, choose a safe and public 
+                    location for the exchange, which helps build trust and ensures safety for both parties. It’s also important to avoid sending 
+                    items before receiving payment to protect yourself from potential fraud. Always meet in person to exchange the item and 
+                    payment simultaneously, ensuring that both parties feel secure in the transaction. By following these best practices, you 
+                    can navigate the selling process on AutoHub with confidence and maximize your success.</p>
+            </div>
+        </div>
+        </div>
+        <!-- support setion end-->
+
+        <div class="terms-container"> <!-- link for tearm and conditions-->
+            <a href="terms&condition.html" id="term">Terms and Conditions</a>
+        </div> 
+
+        <!--footer section start-->
+        <section class="footer"> 
+
+            <div class="box-container">
+
+                <div class="box">
+                    <h3>About us</h3>
+                    <a href="AboutUS.html">About us</a>
+                    <a href="AboutUS.html">Our community</a>
+
+                </div>
+                <div class="box">
+                    <h3>Support</h3>
+                    <a href="Contact.html">24 hours contact center</a>
+                    <a href="Support.html">FAQs</a>
+                </div>
+                <div class="box">
+                    <h3>Terms and Conditions</h3>
+                    <a href="terms&condition.html">General</a>
+                    <a href="terms&condition.html">Copyright</a>
+                </div>
+                <div class="follow-us-container">
+                    <h3>Follow Us</h3> <br>
+                    <a href="#"><img src="Images/facebook icon.png" alt="Facebook" id="social-links"></a>
+                    <a href="#"><img src="Images/twitter icon.png" alt="Twitter" id="social-links"></a>
+                    <a href="#"><img src="Images/instragram icon.png" alt="Instagram" id="social-links"></a>
+                </div>
+            </div>
+            <h1 class="credit"><span>@ 2022 All Rights Reseverd </span></h1>
+        </section>
+    </body>
+</html>

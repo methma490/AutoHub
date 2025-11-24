@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AutoHub - Vehicles in Srilanka</title>
+        <link rel="icon" href="Images/Title logo.png" sizes="32x32" type="image/png"> <!-- Standard favicon for web browsers -->
+        
+        
+
+        
+        <link rel="stylesheet" href="CSS/AdsPgStyles.css">
+        <script src="JS/AdsPgJS.js"></script>
+    </head>
+    <body>
+        <div class="nvbar">
+            <a href="Home.html"> <img class="Hlogo" src="Images/websitelogo.png" alt="webpage logo"> </a>
+            <ul id="nvgbar">
+                <li class="nvglist"> <a  href="Home.html"> Home </a> </li>
+                <li class="nvglist"> <a class="active" href="#"> Ads </a> </li>
+                <li class="nvglist"> <a href="Support.html"> Support </a> </li>
+                <li class="nvglist"> <a href="AboutUS.html"> About us </a> </li>
+                <li class="nvglist"> <a href="Contact.html"> Contact us </a> </li>
+                <li class="nvglist"> <a href="login.html"> Login </a> </li>
+            </ul>
+            <a href="Profile.html"> <img class="Flogo" src="Images/profile logo.png" alt="profile logo"> </a>
+            </div>
+
+         <!--Ads Page Start-->
+        <div class="ads-page">
+            <div class="search-filter">
+
+                <video id="adsVideo" width="300" height="200"  controls autoplay muted loop >
+                    <source src="AdsVideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            
+                 
+
+                
+                <label for="category"><h3>Category :</h3></label>
+                <select name="category" id="category" class="search-box">
+                    <option value="Motor bikes">Motor bikes</option>
+                    <option value="Cars">Cars</option>
+                    <option value="Vans">Vans</option>
+                    <option value="Lorry">Lorry</option>
+                </select>
+               
+                <label for="location"><h3>Location :</h3></label>
+                <select name="location" id="location" class="search-box">
+                    <option value="Colombo">Colombo</option>
+                    <option value="Gampaha">Gampaha</option>
+                    <option value="Galle">Galle</option>
+                    <option value="Kaluthara">Kaluthara</option>
+                    <option value="Ratnapura">Ratnapura</option>
+                    <option value="Negombo">Negombo</option>
+                    <option value="Matara">Matara</option>
+                    <option value="Kaduwela">Kaduwela</option>
+                    <option value="Badulla">Badulla</option>
+                    <option value="Nuwara">Nuwara</option>
+                </select> 
+                <br><br>
+                <button type="button" onclick="filterAds()">Search</button>
+                <p id="validationMessage" style="color:red; display:none;">Not Valid</p>
+
+                
+            </div>
+            
+            <!-- Ads display section -->
+            <div class="ads-section">
+                <div class="ad-box create-ad">
+                    <button onclick="window.location.href='createad.html'";>Create Ad</button>
+                </div>
+
+                <!-- Image ad-boxes with categories -->
+                <div class="ad-box" id="Motor bikes" onclick="showDetails(this)">
+                    <div class="image-container">
+                        <img src="images/DTracker1.jpg" alt="DTracker1" data-condition="used" data-price="Rs.1800000" data-phone="077725030" data-location="Kaduwela" data-description="New engine oil and coolent service up to date"
+                        >
+                        <img src="images/DTracker2.jpg" alt="DTracker2" data-condition="used" data-price="Rs.1800000" data-phone="077725030" data-location="Kaduwela" data-description="New engine oil and coolent service up to date">
+                        <img src="images/DTracker3.jpg" alt="DTracker3" data-condition="used" data-price="Rs.1800000" data-phone="077725030" data-location="Kaduwela" data-description="New engine oil and coolent service up to date">
+                    </div>
+
+                    
+                    
+                </div>
+
+
+                <div class="ad-box" id="Motor bikes" onclick="showDetails(this)">
+                    <div class="image-container" >
+                     <img src="images/S1000RR(1).jpg" alt="S1000RR(1)" 
+                      data-condition="New" data-price="Contact the owner" data-phone="0762485434" data-location="Colombo" data-description="New engine oil and coolent service up to date">
+                     <img src="images/S1000RR(2).jpg" alt="S1000RR(2)" 
+                      data-condition="Used" data-price="Contact the owner" data-phone="0762485434" data-location="Colombo" data-description="New engine oil and coolent service up to date">
+                      
+                    </div>
+                    
+                </div>
+
+                
+                <div class="ad-box" id="Cars" onclick="showDetails(this)">
+                    <div class="image-container">
+                        <img src="images/wagonR1.jpg" alt="wagonR1" data-condition="Vehicle in perfect condition" data-price="Rs.3500000" data-phone="0758792878" 
+                        data-location="Gampaha" data-description="Manufactured 2014,registered in 2015,Millage 80000km and call for more details">
+                    
+                        <img src="images/wagonR2.jpg" alt="wagonR2" >
+                    </div>
+                </div>
+
+                <div class="ad-box" id="Vans" onclick="showDetails(this)">
+                    <div class="image-container">
+                        <img src="images/Caravan VX1.jpg" alt="Caravan VX1" data-condition="Used" data-price="Rs.4500000," data-phone="0725326703" data-location="Kaluthara" 
+                        data-description="Original VX(CRGE) 1994, TD27 Engine,Auto door,New Tyre..(call for more details)">
+                        <img src="images/Caravan VX2.jpg" alt="Caravan VX2" >
+                    </div>
+                </div>
+
+                <div class="ad-box" id="Lorry" onclick="showDetails(this)">
+                    <div class="image-container">
+                        <img src="images/Tipper2.jpg" alt="Tipper2" data-condition="Used" data-price="Rs.5000000" data-phone="0776957426" data-location="Galle" 
+                        data-description="Brand new engine 16 16,Modal 2012">
+                        <img src="images/Tipper3.jpg" alt="Tipper3" >
+                    </div>
+                </div>
+
+                <div class="ad-box" id="Motor bikes" onclick="showDetails(this)">
+                    <div class="image-container">
+                        <img src="images/honert.jpg" alt="honert" data-condition="Used" data-price="Rs.1490000" data-phone="0726957450" data-location="Negombo" 
+                        data-description="Smooth engine, Service done, All sensor are working">
+                        <img src="images/honert1.jpg" alt="hornert1" >
+                    </div>
+                </div>
+
+                <div class="ad-box" id="Cars" onclick="showDetails(this)">
+                    <div class="image-container">
+                        <img src="images/Lancer1.jpg" alt="Lancer1" data-condition="Used" data-price="Rs.4700000" data-phone="0776337456" data-location="Ratnapura" 
+                        data-description="Manual 1300 carb, 17 allow weels, Wide body kit evolution">
+                        <img src="images/Lancer2.jpg" alt="Lancer2" >
+                    </div>
+                </div>
+                
+            
+                </div>
+        </div>
+
+        <!-- Modal or section to show details -->
+        <div id="detailsModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeDetails()">&times;</span>
+                <h3 id="adCondition"></h3>
+                <p id="adPrice"></p>
+                <p id="adPhone"></p>
+                <p id="adLocation"></p>
+                <p id="adDescription"></p>
+                
+                    <a  href="AdsPgAskQuestion.html">Ask Question</a>
+                
+                
+            </div>
+        </div>
+
+        
+<script>
+
+
+
+            // Function to fetch ads from the server and display them
+function loadAds() {
+    fetch('fetch_ads.php')
+        .then(response => response.json())
+        .then(data => {
+            const adsSection = document.querySelector('.ads-section');
+
+            // Clear existing ads
+            adsSection.innerHTML = '';
+
+            // Loop through ads and create HTML elements
+            data.forEach(ad => {
+                const adBox = document.createElement('div');
+                adBox.classList.add('ad-box');
+                adBox.setAttribute('onclick', 'showDetails(this)');
+                adBox.setAttribute('id', ad.vehicle_type);
+
+                const imageContainer = document.createElement('div');
+                imageContainer.classList.add('image-container');
+
+                // Assuming there are 5 photos, we only take the non-null ones
+                for (let i = 1; i <= 5; i++) {
+                    const photoPath = ad['photo' + i];
+                    if (photoPath) {
+                        const img = document.createElement('img');
+                        img.src = photoPath;
+                        img.alt = ad.brand; // Or any other descriptive alt text
+                        img.setAttribute('data-condition', ad.vehicle_condition);
+                        img.setAttribute('data-price', ad.price);
+                        img.setAttribute('data-phone', ad.phone);
+                        img.setAttribute('data-location', ad.city);
+                        img.setAttribute('data-description', ad.description);
+                        imageContainer.appendChild(img);
+                    }
+                }
+
+                adBox.appendChild(imageContainer);
+                adsSection.appendChild(adBox);
+            });
+        })
+        .catch(error => console.error('Error fetching ads:', error));
+}
+
+// Call loadAds on page load
+window.onload = loadAds;
+
+        </script>
+
+        <!--footer section start-->
+        <section class="footer"> 
+
+            <div class="box-container">
+    
+                <div class="box">
+                    <h3>About us</h3>
+                    <a href="AboutUS.html">About us</a>
+                    <a href="AboutUS.html">Our community</a>
+        
+                </div>
+                <div class="box">
+                    <h3>Support</h3>
+                    <a href="Contact.html">24 hours contact center</a>
+                    <a href="Support.html">FAQs</a>
+                </div>
+                <div class="box">
+                    <h3>Terms and Conditions</h3>
+                    <a href="terms&condition.html">General</a>
+                    <a href="terms&condition.html">Copyright</a>
+                </div>
+                <div class="follow-us-container">
+                    <h3>Follow Us</h3> <br>
+                    <a href="#"><img src="Images/facebook icon.png" alt="Facebook" id="social-links"></a>
+                    <a href="#"><img src="Images/twitter icon.png" alt="Twitter" id="social-links"></a>
+                    <a href="#"><img src="Images/instragram icon.png" alt="Instagram" id="social-links"></a>
+                </div>
+            </div>
+            <h1 class="credit"><span>@ 2022 All Rights Reseverd </span></h1>
+         </section>
+
+    </body>
+</html>

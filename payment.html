@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> AutoHub - Vehicles in Srilanka</title>
+        <link rel="icon" href="Images/Title logo.png" sizes="32x32" type="image/png"> <!-- Standard favicon for web browsers -->
+        <link rel="stylesheet" href="CSS/payment.css">
+        <script src="JS/payment.js"> </script>
+    </head>
+    <body>
+        
+        <!--------------------------------------------navigation bar start--------------------------------------------------->
+        <div class="nvbar">
+        <a href="Home.html"> <img class="Hlogo" src="Images/websitelogo.png" alt="webpage logo"> </a>
+        <ul id="nvgbar">
+            <li class="nvglist"> <a href="Home.html"> Home </a> </li>
+            <li class="nvglist"> <a class="active" href="#"> Ads </a> </li>
+            <li class="nvglist"> <a href="Support.html"> Support </a> </li>
+            <li class="nvglist"> <a href="AboutUS.html"> About us </a> </li>
+            <li class="nvglist"> <a href="Contact.html"> Contact us </a> </li>
+            <li class="nvglist"> <a href="login.html"> Login </a> </li>
+        </ul>
+        <a href="Profile.html"> <img class="Flogo" src="Images/profile logo.png" alt="profile logo"> </a>
+        </div>
+        <!--------------------------------------------navigation bar End--------------------------------------------------->
+        
+        
+        <!---------------------------create payment  form---------------------------------------->
+        <div class="container">
+            <form action="payment-insert.php" method="POST">
+    
+                <div class="row">
+    
+                    <!----------------------Billing address section----------------------->
+                    <div class="col">
+                        <h3 class="title">Billing Address</h3>
+    
+                        <div class="inputBox">
+                            <label for="name">Full Name:</label>
+                            <input type="text" id="name" placeholder="Enter your full name"  name="name" required>
+                            <div id="error-msg1" style="color: rgb(255, 0, 0);"></div>
+                        </div>
+    
+                        <div class="inputBox">
+                            <label for="email">Email:</label>
+                            <input type="text" id="email" placeholder="Enter email address" name="email" required>
+                            <div id="error-msg2" style="color: rgb(255, 0, 0);"></div>
+                        </div>
+    
+                        <div class="inputBox">
+                            <label for="address">Address:</label>
+                            <input type="text" id="address" placeholder="Enter address"  name="address" required>
+                            <div id="error-msg3" style="color: rgb(255, 0, 0);"></div>
+                        </div>
+    
+                        <div class="inputBox">
+                            <label for="city">City:</label>
+                            <input type="text" id="city" placeholder="Enter city" name="city" required>
+                            <div id="error-msg4" style="color: rgb(255, 0, 0);"></div>
+                        </div>
+    
+                    <div class="flex">
+    
+                        <div class="inputBox">
+                            <label for="state">State:</label>
+                            <input type="text" id="state" placeholder="Enter state" name="state"  required>
+                            <div id="error-msg5" style="color: rgb(255, 0, 0);"></div>
+                        </div>
+    
+                        <div class="inputBox">
+                            <label for="zip">Zip Code:</label>
+                            <input type="number" id="zip" placeholder="123 456" name="zip" required>
+                            <div id="error-msg6" style="color: rgb(255, 0, 0);"></div>
+                        </div>
+    
+                    </div>
+                    </div>
+
+                    <!------------------Billing payment section------------------------->
+                    <div class="col">
+                        <h3 class="title">Payment</h3>
+    
+                        <div class="inputBox">
+                            <label for="name">Card Accepted:</label>
+                            <img src="images/U-card-img.png" alt="">
+                        </div>
+    
+                        <div class="inputBox">
+                            <label for="cardName">Name On Card:</label>
+                            <input type="text" id="cardName" placeholder="Enter card name" name="cardName" required>
+                            <div id="error-msg7" style="color: rgb(255, 0, 0);"></div>
+                        </div>
+    
+                        <div class="inputBox">
+                            <label for="cardNum">Credit Card Number:</label>
+                            <input type="text" id="cardNum" placeholder="1111-2222-3333-4444" name="cardNum"  maxlength="19" required>
+                            <div id="error-msg8" style="color: rgb(255, 0, 0);"></div>
+                        </div>
+    
+                        <div class="inputBox">
+                            <label for="expmonth">Exp Month:</label>
+                            <select name="expmonth" id="expmonth" name="name">
+                                <option value="">Choose month</option>
+                                <option value="January">January</option>
+                                <option value="February">February</option>
+                                <option value="March">March</option>
+                                <option value="April">April</option>
+                                <option value="May">May</option>
+                                <option value="June">June</option>
+                                <option value="July">July</option>
+                                <option value="August">August</option>
+                                <option value="September">September</option>
+                                <option value="October">October</option>
+                                <option value="November">November</option>
+                                <option value="December">December</option>
+                            </select>
+                            <div id="error-msg10" style="color: rgb(255, 0, 0);"></div>
+                        </div>
+    
+    
+                        <div class="flex">
+                            <div class="inputBox">
+                                <label for="expYear">Exp Year:</label>
+                                <select name="expYear" id="expYear" name="expYear" >
+                                    <option value="">Choose Year</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                    <option value="2027">2027</option>
+                                </select>
+                                <div id="error-msg11" style="color: rgb(255, 0, 0);"></div>
+                            </div>
+    
+                            <div class="inputBox">
+                                <label for="cvv">CVV</label>
+                                <input type="number" id="cvv" placeholder="1234"  name="cvv" required>
+                                <div id="error-msg9" style="color: rgb(255, 0, 0);"></div>
+                            </div>
+                            
+                        </div>
+    
+                    </div> 
+                    <!-----------------End of the billing payment section------------------------>
+    
+                </div>
+                            <div class="inputBox">
+
+                                <div>
+                                <label for="amount">Amount</label>
+                                <input type="number" id="amount" placeholder="249.99 USD"  name="amount" required>
+                                <div id="error-msg12" style="color: rgb(255, 0, 0);"></div>
+                                </div>
+                                
+                            </div>
+    
+                <button type="submit" class="submit_btn"  onclick="correctData(event)">Proceed to Checkout</button>
+            </form>
+
+            
+    
+        </div>
+        <!----------------------------------------End of the payent form------------------------------------------->
+
+
+        
+
+
+
+        <!--------------------------------------------footer section start--------------------------------------------------->
+        <section class="footer"> 
+
+            <div class="box-container">
+
+                <div class="box">
+                    <h3>About us</h3>
+                    <a href="AboutUS.html">About us</a>
+                    <a href="AboutUS.html">Our community</a>
+        
+                </div>
+                <div class="box">
+                    <h3>Support</h3>
+                    <a href="Contact.html">24 hours contact center</a>
+                    <a href="Support.html">FAQs</a>
+                </div>
+                <div class="box">
+                    <h3>Terms and Conditions</h3>
+                    <a href="terms&condition.html">General</a>
+                    <a href="terms&condition.html">Copyright</a>
+                </div>
+                <div class="follow-us-container">
+                    <h3>Follow Us</h3> <br>
+                    <a href="#"><img src="Images/facebook icon.png" alt="Facebook" id="social-links"></a>
+                    <a href="#"><img src="Images/twitter icon.png" alt="Twitter" id="social-links"></a>
+                    <a href="#"><img src="Images/instragram icon.png" alt="Instagram" id="social-links"></a>
+                </div>
+            </div>
+            <h1 class="credit"><span>@ 2022 All Rights Reseverd </span></h1>
+            </section>
+            <!--------------------------------------------footer section End--------------------------------------------------->
+
+    </body>
+</html>

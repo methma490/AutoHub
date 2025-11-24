@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="issues.css">
+    <title>Submit Issue</title>
+</head>
+<body>
+    <div class="nvbar">
+        <a href="Home.html"> <img class="Hlogo" src="Images/websitelogo.png" alt="webpage logo"> </a> <!-- Logo linked to the home page -->
+        <ul id="nvgbar">
+            <li class="nvglist"> <a href="Home.html"> Home </a> </li>
+            <li class="nvglist"> <a href="AdsPg.html"> Ads </a> </li>
+            <li class="nvglist"> <a href="Support.html"> Support </a> </li>
+            <li class="nvglist"> <a href="AboutUS.html"> About us </a> </li>
+            <li class="nvglist"> <a href="Contact.html"> Contact us </a> </li>
+            <li class="nvglist"> <a href="login.html"> Login </a> </li>
+        </ul>
+        <a href="Profile.html"> <img class="Flogo" src="Images/profile logo.png" alt="profile logo"> </a>
+        </div>
+    <div class="form">
+    <form action="issues.php" method="POST">
+        <h1>Submit an Issue</h1>
+        <label for="id">User ID:</label><br>
+        <input type="text" name="id" id="id" required><br><br>
+
+        <label for="issue">Issue Description:</label><br>
+        <textarea name="issue" id="issue" rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" name="action" value="Submit">
+        <input type="submit" name="action" value="Update" id="Update">
+        <input type="submit" name="action" value="Delete" id="delete">
+    </form>
+    </div>
+
+    <section class="footer"> 
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>About us</h3>
+                <a href="AboutUS.html">About us</a>
+                <a href="AboutUS.html">Our community</a>
+
+            </div>
+            <div class="box">
+                <h3>Support</h3>
+                <a href="Contact.html">24 hours contact center</a>
+                <a href="Support.html">FAQs</a>
+            </div>
+            <div class="box">
+                <h3>Terms and Conditions</h3>
+                <a href="terms&condition.html">General</a>
+                <a href="terms&condition.html">Copyright</a>
+            </div>
+            <div class="follow-us-container">
+                <h3>Follow Us</h3> <br>
+                <a href="#"><img src="Images/facebook icon.png" alt="Facebook" id="social-links"></a>
+                <a href="#"><img src="Images/twitter icon.png" alt="Twitter" id="social-links"></a>
+                <a href="#"><img src="Images/instragram icon.png" alt="Instagram" id="social-links"></a>
+            </div>
+        </div>
+        <h1 class="credit"><span>@ 2022 All Rights Reseverd </span></h1>
+     </section>
+</body>
+</html>
